@@ -1,0 +1,1208 @@
+/* ============================================================
+   RESET GENERAL
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url('Iconos/patrones.png');
+    background-repeat: repeat;
+    background-size: 1100px 1100px;
+    background-position: center;
+
+
+    .whatsapp-float {
+        /* 1. POSICIONAMIENTO FIJO E IZQUIERDO */
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        z-index: 1000;
+
+        /* 2. DIMENSIONES Y FORMA DEL BOTÓN BASE */
+        background-color: #40c351;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+        /* 3. CENTRADO DE LA IMAGEN DENTRO DEL CÍRCULO */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* 4. EFECTOS */
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+        background-color: #2ca036;
+        transform: scale(1.1);
+    }
+
+    /* --- ESTILOS DE LA IMAGEN DENTRO DEL BOTÓN --- */
+    .whatsapp-float img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+    width: 100%;
+    background: #fff;
+    padding: 10px 45px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.18);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    z-index: 20;
+}
+
+.logo-img {
+    width: 175px;
+    height: 215px;
+}
+
+
+/* ============================================================
+   MENÚ CENTRADO
+   ============================================================ */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #e63946;
+}
+
+.arrow {
+    font-size: 0.75rem;
+    margin-left: 3px;
+    color: #e63946;
+}
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 12px 0;
+    width: 190px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 18px;
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #ffe5e5;
+    color: #e63946;
+}
+
+/* Mostrar menú al pasar */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ============================================================
+   ICONOS DERECHA (CARRITO + INICIAR SESIÓN)
+   ============================================================ */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* carrito como imagen */
+.cart-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.cart-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* botón iniciar sesión rojo */
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* ← separa imagen del texto */
+    background: #e63946;
+    color: white;
+    padding: 7px 26px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.btn-login:hover {
+    background: #e63946;
+    transform: scale(1.05);
+}
+
+/* imagen dentro del botón de login */
+.login-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.seccion-principal {
+    margin-top: 50px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 150px 130px;
+
+    /* Fondo negro + degradado */
+    background: radial-gradient(circle at 90% 80%,
+            rgba(90, 0, 0, 0.6) 0%,
+            rgba(20, 0, 0, 0.4) 30%,
+            rgba(0, 0, 0, 1) 70%);
+    background-color: #000;
+
+    overflow: hidden;
+    /* para que la imagen pueda salirse */
+}
+
+/* --- IMAGEN OCUPA TODA LA DERECHA --- */
+.hero-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.pizza-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.titulo-portada {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: #fff;
+    font-size: 5rem;
+    line-height: 1.05;
+    margin: 0;
+}
+
+/* Línea superior: una sola fila */
+.linea1 {
+    display: block;
+    white-space: nowrap;
+}
+
+/* Línea inferior: también una sola fila */
+.linea2 {
+    display: block;
+    white-space: nowrap;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+/* Color rojo para "DISFRUTA!" */
+.rojo {
+    color: #e63946;
+    
+}
+
+.hero-content {
+    color: #ffffff;
+    position: relative;
+    z-index: 5;
+    margin-left: 35px;
+    overflow: hidden;
+    margin-top: 10px;
+    
+    
+}
+.hero-content p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #e63946;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    /* permite centrar */
+    margin-top: 20px;
+    margin-left: 240px;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+/* Al pasar el cursor */
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: #e63946;
+    z-index: 10;
+}
+
+.btn-primary:hover {
+    background: #e63946;
+}
+
+/* Doodles */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 140px;
+    opacity: 0.17;
+}
+
+.hero::before {
+    background-image: url("doodles1.png");
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 4%;
+}
+
+.hero::after {
+    background-image: url("doodles2.png");
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    right: 6%;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 980px) {
+
+    .nav-links {
+        gap: 25px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .pizza-img {
+        max-width: 340px;
+    }
+
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+
+body {
+    background-color: #fff;
+    color: #4d4d4d;
+}
+
+/* ============================================================
+   FONDO PARA LA SEGUNDA SECCIÓN (Bienvenida + Tarjetas)
+============================================================ */
+.fondo-2 {
+    background-image: url("Imagenes/fondo2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.especial.fondo-2 {
+    padding-top: 0 !important;
+}
+
+.bienvenida {
+    padding-bottom: 5px !important;
+    text-align: center
+}
+
+.bienvenida h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+
+.bienvenida p {
+    max-width: 990px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ============================================================
+   TÍTULO SECCIÓN TARJETAS
+============================================================ */
+.especial h2 {
+    text-align: center;
+    font-size: 19px;
+    letter-spacing: 4px;
+    color: #e63946;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   TARJETAS
+============================================================ */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+/* ============================================================
+   SOLUCIÓN DEFINITIVA: LARGO DE IMAGEN FORZADO
+============================================================ */
+
+/* 1. La tarjeta debe crecer libremente hacia abajo */
+.card {
+    width: 330px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-bottom: 20px !important;
+    border: 2px solid #e63946;
+    border-radius: 20px;
+}
+
+/* 2. Forzamos el largo a la imagen Y a cualquier contenedor que la envuelva */
+.card img,
+.card div:has(img),
+.card figure {
+    height: 320px !important;
+    min-height: 300px !important;
+    width: 100% !important;
+    max-height: none !important;
+}
+
+.card img {
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 12px;
+}
+
+/* ============================================================
+    AJUSTE SOLO PARA EL TÍTULO (SUBTÍTULO)
+============================================================ */
+
+/* ============================================================
+   AJUSTE: SUBTÍTULO UN POCO MÁS ARRIBA
+============================================================ */
+
+.cards-container .card h3 {
+    /* Bajamos de 35px a 20px para que suba hacia la imagen */
+    margin-top: 8px !important;
+
+    /* Mantenemos el margen inferior en 0 para que el texto no se aleje */
+    margin-bottom: 0px !important;
+
+    font-size: 20px !important;
+    font-weight: 800;
+    color: #e63946;
+    text-align: center;
+}
+
+.cards-container .card p {
+    margin-top: 8px !important;
+
+    font-size: 14px !important;
+    line-height: 1.3;
+    color: #4d4d4d;
+    text-align: center;
+}
+
+
+
+
+
+/* =========================================================
+   MENU
+============================================================ */
+
+.menu-favorito {
+    padding: 80px 0;
+    /* Espaciado como en la imagen */
+    border-radius: 0;
+}
+
+/* ===========================
+   CONTENEDOR GENERAL
+=========================== */
+.menu-favorito {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+.menu-header .subtitulo {
+    color: #e63946;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.menu-header .titulo-principal {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #000;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+/* ===========================
+   CATEGORÍAS
+=========================== */
+.categorias-menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.categoria {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 32px;
+    background: #fff;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.categoria span {
+    font-size: 22px;
+}
+
+.categoria:hover {
+    transform: translateY(-3px);
+}
+
+.categoria.activa {
+    background: #e63946;
+    color: #fff;
+}
+
+
+
+
+/* ===========================
+   LISTA DE PRODUCTOS
+=========================== */
+.lista-productos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* ===========================
+   TARJETAS
+=========================== */
+.producto-card {
+    width: 320px;
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: .3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ===========================
+   IMAGEN
+=========================== */
+.producto-img img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* ===========================
+   INFORMACIÓN DEL PRODUCTO
+=========================== */
+.producto-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.producto-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.precio {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.precio strong {
+    font-size: 30px;
+    color: #000;
+}
+
+/* Estrellas */
+.estrellas {
+    font-size: 18px;
+    color: #ffb800;
+    margin-bottom: 18px;
+}
+
+/* ===========================
+   BOTÓN
+=========================== */
+.btn-card {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #e63946;
+    background: #fff;
+    color: #e63946;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.btn-card:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+/* ============================================================
+   SECCIÓN FONDO - BIENVENIDA
+============================================================ */
+.fondo-seccion {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.fondo-seccion h1,
+.fondo-seccion h2 {
+    color: #fff;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    /* Espacio después del título */
+}
+
+.fondo-seccion p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    /* Espacio después del párrafo */
+}
+
+/* ============================================================
+   CONTENEDOR DE TARJETAS
+============================================================ */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* ============================================================
+   TARJETAS
+============================================================ */
+.card {
+    background: white;
+    width: 230px;
+    /* TARJETA NO MUY LARGA */
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #e63946;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* Reducir espacio entre el texto y el título siguiente */
+.especial {
+    margin-top: 40px;
+}
+
+/* Reducir espacio entre las dos secciones */
+.hero.fondo-seccion {
+    padding-bottom: 40px;
+    margin-bottom: -10px;
+}
+
+
+/* ============================================================
+   CARRUSEL
+============================================================ */
+
+/* Ocultar radios */
+input[type="radio"] {
+    display: none;
+}
+
+/* CONTENEDOR FULL WIDTH */
+.carrusel-promos {
+    width: 100%;
+}
+
+/* ÁREA VISIBLE */
+.slider {
+    position: relative;
+    width: 100vw;
+    /* 👈 pantalla completa */
+    height: 110vh;
+    /* 👈 se adapta a la altura */
+    overflow: hidden;
+}
+
+/* PISTA */
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+/* SLIDE */
+.slide {
+    width: 100vw;
+    /* 👈 SOLO 1 imagen por vista */
+    height: 100%;
+    flex-shrink: 0;
+}
+
+/* IMAGEN */
+.slide img {
+    position: relative;
+    width: 100vw;
+    height: 117vh;
+    object-fit: cover;
+    /* llena la pantalla sin deformar */
+    display: block;
+}
+
+/* MOVIMIENTO */
+#s1:checked~.slider .slides {
+    transform: translateX(0);
+}
+
+#s2:checked~.slider .slides {
+    transform: translateX(-100vw);
+}
+
+#s3:checked~.slider .slides {
+    transform: translateX(-200vw);
+}
+
+/* FLECHAS */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Mostrar flechas correctas */
+#s1:checked~.slider .a1,
+#s2:checked~.slider .a2,
+#s3:checked~.slider .a3 {
+    display: block;
+}
+
+
+
+/* ------------------- SECCIÓN CLIENTES ------------------- */
+
+.clientes {
+    width: 100%;
+    margin-top: 70px;
+    background: #fdeceb !important;
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    /* Mantener el espacio entre columnas */
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    /* Corta el desbordamiento de la imagen de fondo */
+}
+
+/* ------------------- FONDO (SOLUCIÓN PARA VER IMAGEN COMPLETA) ------------------- */
+
+.fondo-seccion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    width: 200%;
+    height: 180%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+/* ------------------- IZQUIERDA (CONTENIDO) ------------------- */
+
+.left {
+    width: 46%;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    margin-top: 57px;
+    margin-left: 20px;
+}
+
+.subtitulo {
+    letter-spacing: 4px;
+    color: #e63946;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.titulo {
+    font-size: 46px;
+    font-weight: 980;
+    line-height: 1;
+    margin: 10px 0 10px;
+    color: #000;
+}
+
+.descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    color: #4d4d4d;
+}
+
+.btn-opinion {
+    /* Base del botón */
+    background: #e63946;
+    /* Atención: Si estás experimentando desbordamiento, elimina o reduce este margin-left */
+    margin-left: 150px;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    /* CLAVE: Hace que la animación de agrandamiento sea suave */
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+/* ------------------- EFECTO HOVER (AGRANDAR BOTÓN) ------------------- */
+
+.btn-opinion:hover {
+    /* Efecto de fondo cuando el mouse pasa */
+    background: #e63946;
+
+    /* CLAVE: Aumenta el tamaño del botón un 5% (1.05) */
+    transform: scale(1.05);
+
+    /* Asegura que el botón se mantenga en la capa superior durante la transformación */
+    z-index: 10;
+}
+
+
+.btn-opinion:hover {
+    background: #e63946;
+}
+
+/* ------------------- DERECHA ------------------- */
+
+.right {
+    width: 46%;
+    padding: 10px;
+    position: relative;
+    /* Para que el contenido flote sobre el fondo (z-index: 1) */
+    z-index: 1;
+    margin-right: 20px;
+}
+
+.testimonios-title {
+    color: rgb(0, 0, 0);
+    /* Se elimina margin-left para usar solo el padding general de la sección */
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 13px;
+    margin-left: 230px;
+}
+
+/* ------------------- TARJETAS Y CONTENIDO INTERNO ------------------- */
+.testimonial-card {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.35);
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 20px;
+
+    /* CLAVE 1: Agregamos la transición para el efecto suave */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    /* CLAVE 2: Indicador visual de interactividad */
+    cursor: pointer;
+}
+
+/* ------------------- EFECTO HOVER (AGRANDAR TARJETA) ------------------- */
+
+.testimonial-card:hover {
+    /* Aumenta el tamaño de la tarjeta un 3% (1.03) */
+    transform: scale(1.03);
+
+    /* Opcional: Hace la sombra más prominente para dar un efecto de "elevación" */
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.5);
+
+    /* Asegura que la tarjeta flotante se vea encima de otras cosas */
+    z-index: 5;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user h3 {
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user p {
+    margin: 3px 0;
+    text-align: left;
+    font-size: 13px;
+    color: #4d4d4d;
+    line-height: 1.5;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #ffb400;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.rating {
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 900px) {
+    .clientes {
+        flex-direction: column;
+        /* Aumentar padding horizontalmente para móvil */
+        padding: 50px 80px;
+    }
+
+    .clientes .left,
+    .right {
+        width: 100%;
+        margin-right: 0;
+        /* Asegurar que no haya márgenes externos */
+        margin-left: 0;
+    }
+}
+
+
+/* ===== FOOTER GENERAL ===== */
+.footer {
+    padding: 120px 120px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Puntitos decorativos superiores */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-image: radial-gradient(#f5b1b1 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* ===== GRUPOS ===== */
+.footer-grupo h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.footer-grupo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-grupo ul li {
+    margin-bottom: 10px;
+}
+
+.footer-grupo ul li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.footer-grupo ul li a:hover {
+    color: #e63946;
+}
+
+/* ===== REDES SOCIALES ===== */
+.redes {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.redes img {
+    width: 36px;
+    height: 44px;
+}
+
+/* ===== INFORMACIÓN ===== */
+.footer-info {
+    font-style: normal;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.footer-logo {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin: 6px 0;
+}
+
+/* Libro de reclamaciones */
+.reclamos img {
+    width: 85px;
+    margin-top: 15px;
+}
+
+/* ===== COPY ===== */
+.footer-copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #e63946;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+}

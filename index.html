@@ -1,0 +1,367 @@
+<!DOCTYPE htm>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZANA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+
+            <!-- LOGO -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="Iconos/Logo Pizzana black.png" class="logo-img" alt="logo">
+                </a>
+            </div>
+
+            <!-- MENÚ CENTRADO -->
+            <ul class="nav-links">
+
+                <li><a href="index.html" class="active">Inicio</a></li>
+
+                <!-- MENÚ DESPLEGABLE -->
+                <li class="dropdown">
+                    <a href="#">Menú <span class="arrow">▼</span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Pizzas</a></li>
+                        <li><a href="#">Alitas</a></li>
+                        <li><a href="#">Pastas</a></li>
+                        <li><a href="#">Piqueos</a></li>
+                    </ul>
+                </li>
+
+                <!-- PROMOCIONES -->
+                <li class="dropdown">
+                    <a href="#">Promociones <span class="arrow">▼</span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Promo 1</a></li>
+                        <li><a href="#">Promo 2</a></li>
+                        <li><a href="#">Promo 3</a></li>
+                        <li><a href="#">Promo 4</a></li>
+                    </ul>
+                </li>
+
+                <!-- NOSOTROS -->
+                <li class="dropdown">
+                    <a href="#">Nosotros <span class="arrow">▼</span></a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Visión y Misión</a></li>
+                        <li><a href="#">Valores</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- ICONOS DERECHA -->
+            <div class="nav-icons">
+
+
+                <!-- CARRITO COMO IMAGEN -->
+                <a href="#" class="cart-icon">
+                    <img src="Iconos/carrito de compra.png" alt="Carrito de compras">
+                </a>
+
+                <!-- BOTÓN INICIAR SESIÓN (ROJO, IGUALITO) -->
+                <a href="#" class="btn-login">
+                    <img src="Iconos/iniciar sesion.png" class="login-img" alt="login">
+                    <span>Iniciar sesión</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="seccion-principal">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="titulo-portada">
+                    <span class="linea1">¡ELIGE, COMBINA</span>
+                    <span class="linea2">
+                        Y <span class="rojo">DISFRUTA!</span>
+                    </span>
+                </h1>
+
+                <p>"No hay reglas, solo sabores, arma tu pizza a tu manera"</p>
+                <a href="#" class="btn-primary">¡CREA TU PIZZA!</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="Imagenes/Portada.png" alt="Pizza de tres ingredientes en una tabla de madera"
+                    class="pizza-img">
+            </div>
+        </section>
+    </main>
+
+
+    <!-- SECCIÓN HERO CON SU PROPIO FONDO -->
+    <section class="bienvenida fondo-2">
+        <h1>¡BIENVENIDO A PIZZANA!</h1>
+        <p>"Un lugar donde disfrutar y crear momentos únicos es tan importante como el sabor de cada pizza."</p>
+    </section>
+
+    <!-- SEGUNDA SECCIÓN: TÍTULO + TARJETAS + FONDO DIFERENTE -->
+    <section class="especial fondo-2">
+        <h2>DESCUBRE LO QUE HACE ESPECIAL A CADA PIZZA</h2>
+
+        <div class="cards-container">
+
+            <div class="card">
+                <img src="Imagenes/masa.jpg" alt="Masa artesanal">
+                <h3>MASA ARTESANAL</h3>
+                <p>Preparada a mano cada día para lograr texturas y sabores únicos.</p>
+            </div>
+
+            <div class="card">
+                <img src="Imagenes/productos.jpg" alt="Productos frescos">
+                <h3>PRODUCTOS DE CALIDAD</h3>
+                <p>Usamos ingredientes frescos y seleccionados para un sabor auténtico.</p>
+            </div>
+
+            <div class="card">
+                <img src="Imagenes/personalizada.jpg" alt="Pizza personalizada">
+                <h3>PIZZA PERSONALIZADA</h3>
+                <p>Elige tus toppings y crea la combinación perfecta para ti.</p>
+            </div>
+
+            <div class="card">
+                <img src="Imagenes/entrega.png" alt="Entrega rápida">
+                <h3>ENTREGA RÁPIDA</h3>
+                <p>Servicio eficiente para que disfrutes tu pizza sin esperas.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ⭐ SECCIÓN DEL MENÚ ( -->
+    <section class="menu-favorito">
+
+        <header class="menu-header">
+            <h4 class="subtitulo">SELECCIONA TU PLATO FAVORITO</h4>
+            <h2 class="titulo-principal">¡Un menú hecho para conquistar tu paladar!</h2>
+        </header>
+
+        <!-- CATEGORÍAS -->
+        <nav class="categorias-menu">
+            <button class="categoria"><span>🍗</span> Alitas</button>
+            <button class="categoria activa"><span>🍕</span> Pizzas</button>
+            <button class="categoria"><span>🍝</span> Pastas</button>
+            <button class="categoria"><span>🍤</span> Piqueos</button>
+        </nav>
+
+        <!-- PRODUCTOS -->
+        <section class="lista-productos">
+
+            <article class="producto-card">
+                <div class="producto-img">
+                    <img src="Imagenes/Imagen 1.jpg" alt="Pizza personal">
+                </div>
+                <div class="producto-info">
+                    <h3>Pizza Personal</h3>
+                    <p class="precio">s/ <strong>18</strong></p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <button class="btn-card">Hazla a tu gusto</button>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <div class="producto-img">
+                    <img src="Imagenes/Imagen 4.jpg" alt="Pizza mediana">
+                </div>
+                <div class="producto-info">
+                    <h3>Pizza Mediana</h3>
+                    <p class="precio">s/ <strong>30</strong></p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <button class="btn-card">Hazla a tu gusto</button>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <div class="producto-img">
+                    <img src="Imagenes/Imagen 3.jpg" alt="Pizza grande">
+                </div>
+                <div class="producto-info">
+                    <h3>Pizza Grande</h3>
+                    <p class="precio">s/ <strong>42</strong></p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <button class="btn-card">Hazla a tu gusto</button>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <div class="producto-img">
+                    <img src="Imagenes/Imagen 6.jpg" alt="Pizza familiar">
+                </div>
+                <div class="producto-info">
+                    <h3>Pizza Familiar</h3>
+                    <p class="precio">s/ <strong>50</strong></p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <button class="btn-card">Hazla a tu gusto</button>
+                </div>
+            </article>
+
+        </section>
+
+    </section>
+
+    <aside class="carrusel-promos">
+
+        <!-- Radios -->
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+
+        <div class="slider">
+
+            <div class="slides">
+
+                <div class="slide">
+                    <img src="Imagenes/pizzana flyer 1.png" alt="Promo 1">
+                </div>
+
+                <div class="slide">
+                    <img src="Imagenes/pizzana flyer 2.png" alt="Promo 2">
+                </div>
+
+                <div class="slide">
+                    <img src="Imagenes/pizzana flyer 3.jpg" alt="Promo 3">
+                </div>
+
+            </div>
+
+            <!-- Flechas -->
+            <label for="s3" class="arrow prev a1">&#10094;</label>
+            <label for="s2" class="arrow next a1">&#10095;</label>
+
+            <label for="s1" class="arrow prev a2">&#10094;</label>
+            <label for="s3" class="arrow next a2">&#10095;</label>
+
+            <label for="s2" class="arrow prev a3">&#10094;</label>
+            <label for="s1" class="arrow next a3">&#10095;</label>
+
+        </div>
+
+    </aside>
+
+    <section class="clientes">
+        <img src="Imagenes/fondo pizzana.png" alt="Pizzana fondo" class="fondo-seccion">
+
+        <div class="left">
+            <h4 class="subtitulo">“Contada por quienes la disfrutan”</h4>
+            <h1 class="titulo">NUESTROS CLIENTES</h1>
+            <p class="descripcion">
+                En Pizzana creemos que la mejor publicidad es la satisfacción de nuestros clientes.
+                Cada opinión nos motiva a seguir preparando pizzas llenas de sabor, frescura y cariño.
+            </p>
+
+            <button class="btn-opinion">¡Déjanos tu opinión!</button>
+        </div>
+
+        <div class="right">
+            <h2 class="testimonios-title">TESTIMONIOS</h2>
+
+            <div class="testimonial-card">
+                <div class="user">
+                    <!-- PON AQUÍ TU IMAGEN -->
+                    <img src="Imagenes/Leonardo Prado.jpeg" alt="Leonardo" class="avatar">
+
+                    <div>
+                        <h3>Leonardo Prado</h3>
+                        <p>“Me encanta venir a Pizzana: ambiente cálido, ideal para disfrutar en familia y pizzas
+                            siempre ricas”</p>
+                        <div class="stars">⭐⭐⭐⭐⭐ <span class="rating">5,2</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="user">
+                    <!-- PON AQUÍ TU OTRA IMAGEN -->
+                    <img src="Imagenes/Aracelly Xaviera.jpg" alt="Aracelly" class="avatar">
+
+                    <div>
+                        <h3>Aracelly Xaviera</h3>
+                        <p>“La masa es increíble, suave por dentro y crujiente por fuera. Se nota que todo es fresco.”
+                        </p>
+                        <div class="stars">⭐⭐⭐⭐☆ <span class="rating">4,8</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <section class="footer-grupo">
+            <h3>Nuestros Productos</h3>
+            <ul>
+                <li><a href="#">Pizzas</a></li>
+                <li><a href="#">Alitas</a></li>
+                <li><a href="#">Pastas</a></li>
+                <li><a href="#">Piqueos</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-grupo">
+            <h3>Políticas y Términos</h3>
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Políticas de Privacidad</a></li>
+                <li><a href="#">Políticas de Delivery</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-grupo">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+
+            <nav class="redes">
+                <a href="https://www.instagram.com/pizzana.piura" target="_blank"><img src="Iconos/icono ig.png"
+                        alt="Instagram"></a>
+                <a href="https://www.facebook.com/pizzana.piura" target="_blank"><img src="Iconos/icono fb.png"
+                        alt="Facebook"></a>
+                <a href="https://www.tiktok.com/@pizzana.piura" target="_blank"><img src="Iconos/icono tiktok.png"
+                        alt="TikTok"></a>
+            </nav>
+        </section>
+
+        <address class="footer-info">
+            <a href="index.html" class="fotter-logo">
+                <img src="Imagenes/Logo.png" alt="Pizzana" class="footer-logo">
+            </a>
+            <p>Urb. Las Mercedes - Piura, Perú</p>
+            <p>Cel: 917426368</p>
+            <p>Horario de atención:</p>
+            <p>6:30 pm - 11:30 pm</p>
+
+            <a href="#" class="reclamos">
+                <img src="Imagenes/libro_de_reclamaciones.jpg" alt="Libro de Reclamaciones">
+            </a>
+        </address>
+
+        <p class="footer-copy">
+            © 2025 Pizzana E.I.R.L. Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <a href="https://wa.me/51917426368" target="_blank" class="whatsapp-float">
+        <img src="Iconos/icono whatsapp.png" alt="Icono de WhatsApp">
+    </a>
+
+</body>
+
+</html>
